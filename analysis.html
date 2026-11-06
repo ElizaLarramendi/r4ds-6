@@ -77,56 +77,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>duckdb keeps downloaded extensions and secrets in a temporary directory:
-ℹ /tmp/Rtmp3OWnby/duckdb
-This is removed when the R session ends.
-• Extensions are re-downloaded each session.
-• Secrets are lost.
-ℹ Run duckdb(shared_home = TRUE) (or create ~/.duckdb) to keep them (suitable for most users).
-ℹ Run duckdb(shared_home = FALSE) to accept the temporary directory (and silence this message).
-ℹ See ?duckdb_storage for details and alternatives.</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>! Grouped output by "tucaseid".
-ℹ Override behaviour and silence this message with the `.groups` argument.
-ℹ Or use `.by` instead of `group_by()`.
-! Grouped output by "sex".
-ℹ Override behaviour and silence this message with the `.groups` argument.
-ℹ Or use `.by` instead of `group_by()`.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Missing values are always removed in SQL aggregation functions.
-Use `na.rm = TRUE` to silence this warning
-This warning is displayed once every 8 hours.</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>! Grouped output by "sex" and "major_name".
-ℹ Override behaviour and silence this message with the `.groups` argument.
-ℹ Or use `.by` instead of `group_by()`.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 144 × 4
-   sex    major_name                                   hour hourly_avg
-   &lt;chr&gt;  &lt;chr&gt;                                       &lt;dbl&gt;      &lt;dbl&gt;
- 1 Female Caring For &amp; Helping Household (HH) Members     6       2.23
- 2 Female Caring For &amp; Helping Household (HH) Members     7       3.53
- 3 Female Caring For &amp; Helping Household (HH) Members     8       3.17
- 4 Female Caring For &amp; Helping Household (HH) Members     9       2.73
- 5 Female Caring For &amp; Helping Household (HH) Members    10       2.13
- 6 Female Caring For &amp; Helping Household (HH) Members    11       1.87
- 7 Female Caring For &amp; Helping Household (HH) Members    12       2.28
- 8 Female Caring For &amp; Helping Household (HH) Members    13       2.17
- 9 Female Caring For &amp; Helping Household (HH) Members    14       2.83
-10 Female Caring For &amp; Helping Household (HH) Members    15       3.80
-# ℹ 134 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">

@@ -6,6 +6,7 @@ execute:
 ---
 
 ```{r}
+#| include: false
 #| message: false
 library(tidyverse)
 library(DBI)
@@ -14,6 +15,7 @@ library(dbplyr)
 ```
 
 ```{r}
+#| include: false
 con <- dbConnect(duckdb(), "data/atus.duckdb")
 
 dbplyr_act <- tbl(con, "activities")
@@ -22,6 +24,7 @@ dbplyr_codes <- tbl(con, "activity_codes")
 ```
 
 ```{r}
+#| include: false
 #| cache: true
 activity_avg <- dbplyr_resp |>
   filter(day_type == "Weekday", employment_status == "Not in labor force") |>
@@ -45,6 +48,7 @@ activity_avg <- dbplyr_resp |>
 ```
 
 ```{r}
+#| include: false
 weekday_resp <- dbplyr_resp |>
   filter(day_type == "Weekday", employment_status == "Not in labor force") |>
   select(tucaseid, sex)
@@ -84,7 +88,6 @@ hourly_avg <- crossing(
   select(sex, major_name, hour, hourly_avg) |>
   arrange(sex, major_name, hour)
 
-print(hourly_avg)
 ```
 
 ```{r}
